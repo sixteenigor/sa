@@ -24,7 +24,7 @@ app.get('/getall', function(req, res) {
 
 });
 
-
+console.log("jenkins OK");
 
 
 app.post('/login', function(req, res) {
