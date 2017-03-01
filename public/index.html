@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Super API</title>
+	
+   
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!--<link href="img/dgn_1.png" rel="shortcut icon" type="image/x-icon" />-->
+	 <link rel="icon" type="image/png" href="dgn_1.png">
+   <!-- <link rel="icon" type="image/png" href="img/dgn_1.png" sizes="16x16">-->
+	<script type="text/javascript" src="source/angular.min.js" ></script>
+</head>
+<body ng-controller="indexCtrl" style="margin-left:0px; width: 100% background-color: ; ">
+
+<h3 style="margin-left:25px;"><a href="get.html" >LOGIN</a></h3>
+
+<div class="container">
+<h2>Реєстрація</h2>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-xs-3" for="lastName">Фамилия:</label>
+    <div class="col-xs-9">
+      <input type="text" class="form-control" id="lastName" placeholder="Введите фамилию" ng-model="postObj.lastname">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3" for="firstName">Имя:</label>
+    <div class="col-xs-9">
+      <input type="text" class="form-control" id="firstName" placeholder="Введите имя" ng-model="postObj.firstname">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3" for="fatherName">Отчество:</label>
+    <div class="col-xs-9">
+      <input type="text" class="form-control" id="fatherName" placeholder="Введите отчество" ng-model="postObj.fathername">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3">Дата рождения:</label>
+    <div class="col-xs-3">
+      <select class="form-control" ng-model="postObj.bdate">        
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option>16</option>
+        <option>17</option>
+        <option>18</option>
+        <option>19</option>
+        <option>20</option>
+        <option>21</option>
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
+        <option>25</option>
+        <option>26</option>
+        <option>27</option>
+        <option>28</option>
+        <option>29</option>
+        <option>30</option>
+        <option>31</option>        
+      </select>
+    </div>
+    <div class="col-xs-3">
+      <select class="form-control" ng-model="postObj.bmonth">
+        <option>Місяць</option>
+        <option>Січень</option>
+        <option>Лютий</option>
+        <option>Березень</option>
+        <option>Квітень</option>
+        <option>Травень</option>
+        <option>Червень</option>
+        <option>Липень</option>
+        <option>Серпень</option>
+        <option>Вересень</option>
+        <option>Жовтень</option>
+        <option>Листопад</option>
+        <option>Грудень</option>
+      </select>
+    </div>
+    <div class="col-xs-3">
+      <select class="form-control" ng-model="postObj.byear">
+        <option>Рік</option>
+        <option>1994</option>
+        <option>2024</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3" for="inputEmail">Email:</label>
+    <div class="col-xs-9">
+      <input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model="postObj.email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3" for="inputPassword">Пароль:</label>
+    <div class="col-xs-9">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Введите пароль" ng-model="postObj.password">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3" for="confirmPassword">Подтвердите пароль:</label>
+    <div class="col-xs-9">
+      <input type="password" class="form-control" id="confirmPassword" placeholder="Введите пароль ещё раз" ng-model="postObj.cpassword">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3" for="phoneNumber">Телефон:</label>
+    <div class="col-xs-9">
+      <input type="tel" class="form-control" id="phoneNumber" placeholder="Введите номер телефона" ng-model="postObj.nphone">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3" for="postalAddress">Адрес:</label>
+    <div class="col-xs-9">
+      <textarea rows="3" class="form-control" id="postalAddress" placeholder="Введите адрес" ng-model="postObj.adress"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3">Пол:</label>
+    <div class="col-xs-2">
+      <label class="radio-inline">
+        <input type="radio" name="genderRadios" value="male" ng-model="postObj.sex"> Мужской
+      </label>
+    </div>
+    <div class="col-xs-2">
+      <label class="radio-inline">
+        <input type="radio" name="genderRadios" value="female" ng-model="postObj.sex"> Женский
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-offset-3 col-xs-9">
+      <label class="checkbox-inline">
+        <input type="checkbox" value="agree" ng-model="postObj.agree">  Я согласен с <a href="#">условиями</a>.
+      </label>
+    </div>
+  </div>
+  <br />
+  <div class="form-group">
+    <div class="col-xs-offset-3 col-xs-9">
+    <button class="btn btn-primary" ng-click="registration()">Зареєструватись</button>
+      
+      <input type="reset" class="btn btn-default" value="Очистить форму">
+    </div>
+  </div>
+</form>
+</div>
+
+
+
+
+<!--<div class="container">
+	<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>-->
+
+	<!--<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/finish.css">-->
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

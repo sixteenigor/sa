@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Super API</title>
+	
+   
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!--<link href="img/dgn_1.png" rel="shortcut icon" type="image/x-icon" />-->
+	 <link rel="icon" type="image/png" href="dgn_1.png">
+   <!-- <link rel="icon" type="image/png" href="img/dgn_1.png" sizes="16x16">-->
+	<script type="text/javascript" src="source/angular.min.js" ></script>
+</head>
+<body ng-controller="indexCtrl" style="margin-left:0px; width: 100%; background-color: white; ">
+
+<h3><a href="get.html"></a></h3>
+
+<div class="container">
+<h2>Логін</h2>
+<form class="form-horizontal" style=" background-color: #ADFF2F; width: 30%;">
+  
+  <div class="form-group">
+    <label class="control-label col-xs-3" for="inputEmail">Email:</label>
+    <div class="col-xs-9">
+      <input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model="postObj.email" style="width: 200px; ">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3" for="inputPassword">Пароль:</label>
+    <div class="col-xs-9">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Введите пароль" ng-model="postObj.password" style="width: 200px; ">
+    </div>
+  </div>
+  
+  <br />
+  <div class="form-group">
+    <div class="col-xs-offset-3 col-xs-9">
+    <button class="btn btn-primary" ng-click="login()">Ввійти</button>
+      
+      
+    </div>
+  </div>
+</form>
+</div>
+
+
+
+
+
+	<script type="text/javascript" src="js/get.js"></script>
+</body>
+</html>

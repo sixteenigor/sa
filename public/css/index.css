@@ -1,0 +1,34 @@
+body {
+  overflow: auto; /* добавить полосу прокрутки */ 
+}
+
+table {
+	
+	border-width: 2px;
+}
+
+.container {
+	position: relative;
+}
+
+.containeri {
+
+	
+	
+	/*overflow: auto;*/
+
+	
+}
+
+.table {
+	overflow: auto;
+	position: relative;
+	
+
+}
+
+.names {
+	float: left;
+	color: green;
+	width: 25%;
+}
