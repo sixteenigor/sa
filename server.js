@@ -25,7 +25,7 @@ app.get('/getall', function(req, res) {
 });
 
 
-
+console.log("new");
 
 app.post('/login', function(req, res) {
 	var loginObj = req.body;
